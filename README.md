@@ -2,9 +2,23 @@
 
 <div align="center">
 
+<a href="https://myclaw.ai">
+  <img src="https://img.shields.io/badge/Powered%20by-MyClaw.ai-blue?style=for-the-badge" alt="Powered by MyClaw.ai" />
+</a>
+
 **[English](#english) · [中文](#中文) · [Français](#français) · [Deutsch](#deutsch) · [Русский](#русский) · [日本語](#日本語) · [Italiano](#italiano) · [Español](#español)**
 
 </div>
+
+---
+
+## 🤖 Powered by [MyClaw.ai](https://myclaw.ai)
+
+**[MyClaw.ai](https://myclaw.ai)** is an AI personal assistant platform that gives every user a fully-featured AI agent running on a dedicated server — with complete code control, internet access, and tool integrations. Think of it as your own private AI that can actually *do* things, not just answer questions.
+
+OpenClaw Guardian is an open-source project born from MyClaw.ai's production infrastructure. We run thousands of AI agent instances 24/7, and Guardian is the hardening layer that keeps them alive. We're open-sourcing it so everyone can benefit.
+
+> 🌐 **Try MyClaw.ai**: [https://myclaw.ai](https://myclaw.ai)
 
 ---
 
