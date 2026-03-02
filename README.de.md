@@ -59,7 +59,7 @@ nohup ~/.openclaw/guardian.sh >> /tmp/openclaw-guardian.log 2>&1 &
 ## Als OpenClaw Skill installieren
 
 ```bash
-clawhub install openclaw-guardian
+clawhub install myclaw-guardian
 ```
 
 ## Lizenz
